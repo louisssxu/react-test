@@ -1,42 +1,80 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  background-color: white;
+  padding: 4rem;
+}
+
+#main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffd298;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+}
+
+#main-nav li {
+  list-style-type: none;
+  float: left;
+}
+
+#main-nav a {
+  text-decoration: none;
+}
+
+.page {
+  height: 2000px;
+  width: 100%;
+  background-color: rgb(228, 225, 225);
+  padding-top: 5%;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game-box {
+  position: relative;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-rows: repeat(3, 1fr); */
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #f1eb90;
+  padding: 60px;
+  height: 400px;
+  width: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.game-info-center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.game-info-right {
+  position: absolute;
+  right: 7%;
 }
 
-.card {
-  padding: 2em;
+.square {
+  background-color: #f3b664;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 5%;
 }
 
-.read-the-docs {
-  color: #888;
+.highlighted {
+  background-color: white;
+}
+
+.wrong-square {
+  background-color: #ec8f5e;
+  /* background-color: red; */
+}
+
+.icon {
+  margin: 2px;
+  height: 30px;
+  width: 30px;
 }
